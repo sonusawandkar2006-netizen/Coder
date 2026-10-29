@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #08070d;
+    --panel: #12101d;
+    --text: #f7f4ff;
+    --muted: #b7b1c8;
+    --purple: #c45bff;
+    --pink: #ff67c8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 8%;
+    background: rgba(8, 7, 13, 0.94);
+    border-bottom: 1px solid #ffffff12;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo span,
+.section h2 span {
+    color: var(--pink);
+}
+
+.navbar {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar a {
+    font-size: 14px;
+    color: #e4dff0;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--pink);
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    background: transparent;
+    border: 1px solid #ffffff30;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 90px 8%;
+    background:
+        radial-gradient(ellipse at 75% 45%,
+        #641f8738 0%, transparent 45%),
+        radial-gradient(ellipse at 15% 90%,
+        #35145b30 0%, transparent 45%),
+        var(--bg);
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.welcome {
+    display: inline-block;
+    border: 1px solid #a95bcb70;
+    border-radius: 30px;
+    padding: 8px 17px;
+    margin-bottom: 22px;
+    font-size: 13px;
+    color: #ead8ff;
+    background: #a84aff12;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 76px);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    display: block;
+    background: linear-gradient(90deg,
+        var(--purple), var(--pink));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.hero-description {
+    max-width: 680px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 23px;
+    border-radius: 10px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.primary {
+    border: none;
+    color: white;
+    background: linear-gradient(110deg,
+        var(--purple), var(--pink));
+    box-shadow: 0 5px 25px #c45bff25;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #b9a5d5;
+    color: white;
+}
+
+.section {
+    padding: 90px 8%;
+    text-align: center;
+    border-top: 1px solid #ffffff0c;
+}
+
+.section-label {
+    color: var(--pink);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.section h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    margin-bottom: 22px;
+}
+
+.section > p:not(.section-label) {
+    color: var(--muted);
+    max-width: 760px;
+    margin: 0 auto 25px;
+}
+
+.profile-image {
+    display: block;
+    margin: 25px auto 0;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--purple);
+    background: var(--panel);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 950px;
+    margin: 35px auto 0;
+    text-align: left;
+}
+
+.card {
+    padding: 28px;
+    border: 1px solid #ffffff18;
+    border-radius: 16px;
+    background: linear-gradient(145deg,
+        #171322, #0d0b13);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #c45bff80;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.card .project-number {
+    color: var(--pink);
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.contact-form {
+    max-width: 620px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-size: 14px;
+    color: #e9e1f5;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ffffff24;
+    border-radius: 9px;
+    background: var(--panel);
+    color: white;
+    font: inherit;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--purple);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 10px;
+}
+
+#formStatus {
+    color: #d7b5ff;
+    font-size: 14px;
+}
+
+footer {
+    padding: 25px 8%;
+    border-top: 1px solid #ffffff18;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+footer a {
+    color: var(--pink);
+}
+
+@media (max-width: 700px) {
+    .header {
+        padding: 17px 6%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px 6%;
+        background: #100d19;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navbar.open {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 75px 6%;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
